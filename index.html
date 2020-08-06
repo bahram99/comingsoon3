@@ -229,7 +229,7 @@
 			ajax.setRequestHeader('Content-type' , "application/json; charset=UTF-8");
 			
 			var data = {username: username , email: email , phone: phone , item1: e1 , item2: e2  }
-			ajax.send(data);
+			ajax.send(JSON.stringify(data));
 		}
 	</script>
 
