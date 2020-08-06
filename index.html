@@ -54,7 +54,7 @@
 				Logo
 			</div> -->
 
-			<div class="p-t-10 p-b-60">
+			<div class="p-t-10 p-b-60" style="margin-top: 3rem;">
 				<p class="m1-txt1 p-b-36" style="text-align: center;">
 					  وب سایت ما <span class="m1-txt2"> بزودی بالا خواهد آمد</span>, با ثبت ایمیل ما را دنبال کنید
 				</p>
@@ -220,16 +220,12 @@
 
 	<script>
 		function check(){
-			var select1 = document.getElementById('selectone');
-			var e1 = select1.options[select1.selectedIndex].value;
-			var select2 = document.getElementById('selecttwo');
-			var e2 = select2.options[select2.selectedIndex].value;
 			var username = document.getElementById('username').value;
 			var email = document.getElementById('email').value;
 			var phone = document.getElementById('phone').value;
 
 			var ajax = new XMLHttpRequest();
-			ajax.open('POST','https://jsonplaceholder.typicode.com/posts');
+			ajax.open('POST','http://www.coder-smart.com/courseera/webservice.asmx?op=CreateUser');
 			ajax.setRequestHeader('Content-type' , "application/json; charset=UTF-8");
 			
 			var data = {username: username , email: email , phone: phone , item1: e1 , item2: e2  }
